@@ -1,5 +1,6 @@
+// Adriano Siqueira - 9/3/21 - Java - trabalhando com collections DIO - Exercicios stream API
+
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 //obs.: .stream() nao altera lista
@@ -13,7 +14,6 @@ public class ExerciciosStreamAPI {
         numerosAleatorios.stream()
                 .forEach(System.out::println);
 //        numerosAleatorios.forEach(System.out::println); mesma coisa, ocultando o .stream
-
 
         System.out.println("Pegue os 5 últimos primeiros e coloque dentro de um Set: "); //o numero repetido nao entrara no Set
         numerosAleatorios.stream()
@@ -40,10 +40,6 @@ public class ExerciciosStreamAPI {
                 .forEach(System.out::println);
 
         System.out.println("Mostre a media dos números:");
-//        numerosAleatorios.stream()
-//                .average()
-//                .ifPresent(System.out::println);
-
         numerosAleatorios.stream()
                 .mapToInt(Integer::parseInt) //converte valor por valor de string para int
                 .average()                   //tenta criar uma media
